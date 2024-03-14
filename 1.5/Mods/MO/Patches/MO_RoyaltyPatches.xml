@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+			<value>
+				<li>BS_Giant_RoyalTudorBed</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+			<value>
+				<li>BS_Giant_RoyalTudorBed</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="SlabDoubleBed"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+			<value>
+				<li>BS_Giant_RoyalTudorBed</li>
+			</value>
+		</match>
+	</Operation>
+
+
+</Patch>

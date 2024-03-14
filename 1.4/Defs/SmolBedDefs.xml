@@ -1,0 +1,220 @@
+<Defs>
+
+  <ThingDef Name="BS_SmolBedBase" ParentName="BasicBedBase" Abstract="True">
+    <building>
+      <paintable>true</paintable>
+      <bed_pawnDrawOffset>-0.45</bed_pawnDrawOffset>
+      <bed_maxBodySize>0.7</bed_maxBodySize>
+      <bed_emptyCountsForBarracks>false</bed_emptyCountsForBarracks>
+    </building>
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+  <ThingDef Name="BS_SmolBedBaseSansComfort" ParentName="SansComfortBedBase" Abstract="True">
+    <building>
+      <paintable>true</paintable>
+      <bed_pawnDrawOffset>-0.45</bed_pawnDrawOffset>
+      <bed_maxBodySize>0.7</bed_maxBodySize>
+      <bed_emptyCountsForBarracks>false</bed_emptyCountsForBarracks>
+    </building>
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="BS_SmolBedBase" Name="BS_SmolBed">
+    <defName>BS_SmolBed</defName>
+    <label>smol bed</label>
+    <description>A tiny cozy mattress and sheets on a frame for resting.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/Bed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <rect>(0,0.05,0.5,0.95)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>340</MaxHitPoints>
+      <Beauty>3</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>6</Mass>
+      <BedRestEffectiveness>1.1</BedRestEffectiveness>
+    </statBases>
+    <size>(1,1)</size>
+    <costStuffCount>18</costStuffCount>
+    <designationHotKey>Misc2</designationHotKey>
+    <uiOrder>2010</uiOrder>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BS_SmolBedBaseSansComfort">
+    <defName>BS_SmolHospitalBed</defName>
+    <label>smol hospital bed</label>
+    <description>A tiny bed specially designed for use in hospitals. Adjustable for a patient and festooned with built-in equipment, it improves medical outcomes over normal beds.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/HospitalBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <castEdgeShadows>True</castEdgeShadows>
+    <statBases>
+      <Beauty>3</Beauty>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>2800</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>1.1</BedRestEffectiveness>
+      <Comfort>0.80</Comfort>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>1.1</SurgerySuccessChanceFactor>
+      <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">5</BirthRitualQualityOffset>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+          <li MayRequire="VanillaExpanded.VFEMedical">Facility_VitalsCentre</li>
+          <li MayRequire="VanillaExpanded.VFEMedical">Facility_IVDrip</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <size>(1,1)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>10</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+      <buildingSizeCategory>Small</buildingSizeCategory>
+      <paintable>true</paintable>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <designationHotKey>Misc5</designationHotKey>
+    <researchPrerequisites>
+      <li>HospitalBed</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+    <uiIconScale>0.90</uiIconScale>
+  </ThingDef>
+
+  <!--Smol Primitive Beds-->
+
+  <ThingDef ParentName="BS_SmolBed">
+    <defName>BS_SmolTribalBed</defName>
+    <label>smol primitive bed</label>
+    <description>A tiny primitive bed on a frame for resting.</description>
+    <graphicData>
+      <texPath>Beds/SingleFurBed</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Beauty>2</Beauty>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+    <researchPrerequisites Inherit="False"/>
+  </ThingDef>
+
+  <!--Smol Bedrolls-->
+
+  <ThingDef ParentName="BS_SmolBedBase">
+    <defName>BS_SmolBedroll</defName>
+    <label>smol bedroll</label>
+    <description>A tiny bedroll for resting.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/Bedroll</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(0.5,1)</drawSize>
+      <damageData>
+        <rect>(0,0.05,0.5,0.95)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>340</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>3</Mass>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+    <size>(1,1)</size>
+    <costStuffCount>18</costStuffCount>
+    <designationHotKey>Misc2</designationHotKey>
+    <uiOrder>2010</uiOrder>
+
+    <stuffCategories Inherit="False">
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+
+    <building>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <bed_caravansCanUse>true</bed_caravansCanUse>
+      <destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+      <destroyShakeAmount>0</destroyShakeAmount>
+    </building>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BS_SmolBedBase">
+    <defName>BS_SmolRoyalBed</defName>
+    <label>smol royal bed</label>
+    <description>A tiny luxurious gold-inlaid bed fit for the tiny highborn. Very comfy and beautiful, it is a work of art in itself. Unfortunately only fits ONE.\n\n(Blame Ludeon's code for beds... Might try to sort this out later.)</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/RoyalBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <rect>(0,0.05,3,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>50000</WorkToBuild>
+      <Mass>8</Mass>
+      <Beauty>75</Beauty>
+      <BedRestEffectiveness>1.15</BedRestEffectiveness>
+      <Comfort>0.90</Comfort>
+    </statBases>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <size>(1,1)</size>
+    <costStuffCount>25</costStuffCount>
+    <costList>
+      <Gold>25</Gold>
+    </costList>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+  </ThingDef> 
+</Defs>

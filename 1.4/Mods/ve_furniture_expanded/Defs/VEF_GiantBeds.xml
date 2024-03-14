@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ArtableBedBase">
+    <defName>BS_Giant_Bed_Ergonomic</defName>
+    <label>giant ergonomic bed</label>
+    <description>An ergonomically designed bed to help support the spine, distribute body weight and overall enchance sleep quality.</description>
+    <graphicData>
+      <texPath>Things/Bedroom/ErgonomicBed/SpacerBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,3.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,1.5,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li>Table_LightEndTable</li>
+          <li>Table_RoyalDresser</li>
+          <li>Table_RoyalEndTable</li>
+          <li>Table_Wardrobe</li>
+        </linkableFacilities>
+      </li>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>15000</WorkToBuild>
+      <Mass>75</Mass>
+      <Beauty>2</Beauty>
+      <BedRestEffectiveness>1.15</BedRestEffectiveness>
+      <Comfort>1</Comfort>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <size>(2,3)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>120</costStuffCount>
+    <costList>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <building>
+      <paintable>true</paintable>
+      <bed_pawnDrawOffset>0.40</bed_pawnDrawOffset>
+      <bed_maxBodySize>9999</bed_maxBodySize>
+
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>5</bed_healPerDay>
+    </building>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>60</pathCost>
+    <leaveResourcesWhenKilled>False</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <techLevel>Spacer</techLevel>
+    <researchPrerequisites>
+      <li>MF_ModernFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <uiIconScale>0.90</uiIconScale>
+
+    <interactionCellOffset>(2,2,2)</interactionCellOffset>
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="ArtableBedBase">
+    <defName>BS_Giant_Bed_DoubleErgonomic</defName>
+    <label>giant ergonomic double bed</label>
+    <description>An ergonomically designed double-wide bed to help support the spine, distribute body weight and overall enchance sleep quality. Fits two.</description>
+    <graphicData>
+      <texPath>Things/Bedroom/DoubleErgonomicBed/SpacerDoubleBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,3.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,3,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li>Table_LightEndTable</li>
+          <li>Table_RoyalDresser</li>
+          <li>Table_RoyalEndTable</li>
+          <li>Table_Wardrobe</li>
+        </linkableFacilities>
+      </li>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>2</sleepingSlotCount>
+      </li>
+    </comps>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>30000</WorkToBuild>
+      <Mass>195</Mass>
+      <Beauty>6</Beauty>
+      <BedRestEffectiveness>1.2</BedRestEffectiveness>
+      <Comfort>1.05</Comfort>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <size>(3,3)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>200</costStuffCount>
+    <costList>
+      <ComponentIndustrial>9</ComponentIndustrial>
+    </costList>
+    <building>
+      <bed_pawnDrawOffset>0.40</bed_pawnDrawOffset>
+      <bed_maxBodySize>9999</bed_maxBodySize>
+
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>5</bed_healPerDay>
+    </building>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>60</pathCost>
+    <leaveResourcesWhenKilled>False</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <techLevel>Spacer</techLevel>
+    <researchPrerequisites>
+      <li>MF_ModernFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiIconScale>0.90</uiIconScale>
+
+    <interactionCellOffset>(2,2,2)</interactionCellOffset>
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="ArtableBedBase">
+    <defName>BS_Giant_Bed_Kingsize</defName>
+    <label>giant royal poster bed</label>
+    <description>A bed fit for a king, flush with gold-inlaid posters and a high head rest. Extremely comfortable and beautiful, it is a true luxury. Fits two.</description>
+    <graphicData>
+      <texPath>Things/Bedroom/KingsizeBed/KingsizeBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(6.025,6.025)</drawSize>
+      <damageData>
+        <rect>(0,0.05,3,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li>Table_LightEndTable</li>
+          <li>Table_RoyalDresser</li>
+          <li>Table_RoyalEndTable</li>
+          <li>Table_Wardrobe</li>
+        </linkableFacilities>
+      </li>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>2</sleepingSlotCount>
+      </li>
+    </comps>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>60000</WorkToBuild>
+      <Mass>105</Mass>
+      <Beauty>95</Beauty>
+      <BedRestEffectiveness>1.1</BedRestEffectiveness>
+      <Comfort>0.95</Comfort>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <size>(3,3)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>235</costStuffCount>
+    <costList>
+      <Gold>110</Gold>
+    </costList>
+    <building>
+      <bed_pawnDrawOffset>0.40</bed_pawnDrawOffset>
+      <bed_maxBodySize>9999</bed_maxBodySize>
+
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+    </building>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <fillPercent>0.6</fillPercent>
+    <pathCost>60</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <techLevel>Medieval</techLevel>
+    <researchPrerequisites>
+      <li>MF_RoyalFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiIconScale>0.75</uiIconScale>
+
+    <interactionCellOffset>(2,2,2)</interactionCellOffset>
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+
+
+  
+</Defs>

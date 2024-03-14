@@ -1,0 +1,139 @@
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>BS_Giant_AnimalSleepingSpot</defName>
+    <thingClass>Building_Bed</thingClass>
+    <label>giant animal sleeping spot</label>
+    <description>Designates a spot on the ground where animals should sleep.</description>
+    <size>(2,2)</size>
+    <passability>Standable</passability>
+    <uiOrder>2035</uiOrder>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>False</useHitPoints>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Things/Building/Misc/AnimalBed/AnimalSleepSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <uiIconScale>0.90</uiIconScale>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+      <SurgerySuccessChanceFactor>0.7</SurgerySuccessChanceFactor>
+    </statBases>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <building>
+      <bed_humanlike>false</bed_humanlike>
+      <bed_showSleeperBody>True</bed_showSleeperBody>
+      <sowTag>SupportPlantsOnly</sowTag>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
+      <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <bed_pawnDrawOffset>0.50</bed_pawnDrawOffset>
+    </building>
+    <comps>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+    <interactionCellOffset>(2,2,2)</interactionCellOffset>
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalBedFurnitureBase">
+    <defName>BS_Giant_AnimalSleepingBox</defName>
+    <label>giant animal sleeping box</label>
+    <description>A huge box for animals to sleep in. Fits animals that prefer larger beds like muffalo, bears, cats, or chocobos.</description>
+    <uiOrder>2040</uiOrder>
+    <graphicData>
+      <texPath>Things/Building/Misc/AnimalBed/AnimalSleepBox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0.1,0.1,1.8,1.8)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>25</costStuffCount>
+    <size>(2,2)</size>
+    <building>
+      <bed_maxBodySize>3.9</bed_maxBodySize>
+      <paintable>true</paintable>
+      <bed_pawnDrawOffset>0.50</bed_pawnDrawOffset>
+      
+    </building>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>180</WorkToBuild>
+      <Mass>3</Mass>
+      <BedRestEffectiveness>0.93</BedRestEffectiveness>
+      <Comfort>0.60</Comfort>
+      <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <uiIconScale>0.85</uiIconScale>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+    <interactionCellOffset>(2,2,2)</interactionCellOffset>
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalBedFurnitureBase">
+    <defName>BS_Giant_AnimalBed</defName>
+    <label>giant animal bed</label>
+    <description>A soft bed for animals to sleep on. Fits any animal. Even cats.</description>
+    <uiOrder>2050</uiOrder>
+    <graphicData>
+      <texPath>Things/Building/Misc/AnimalBed/AnimalBed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.35</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <uiIconScale>0.90</uiIconScale>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <building>
+      <destroySound>BuildingDestroyed_Soft_Small</destroySound>
+      <bed_pawnDrawOffset>0.50</bed_pawnDrawOffset>
+    </building>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>400</WorkToBuild>
+      <Mass>5</Mass>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.75</Comfort>
+      <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+    <interactionCellOffset>(2,2,2)</interactionCellOffset>
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+</Defs>
