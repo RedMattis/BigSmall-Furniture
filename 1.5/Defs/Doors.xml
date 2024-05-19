@@ -1,0 +1,115 @@
+<Defs>
+
+  <ThingDef ParentName="DoorBase">
+    <defName>BS_GiantDoor</defName>
+    <label>large door</label>
+    <description>Divides rooms. This large, heavy door requires adjacent walls to function.</description>
+    <thingClass>Building_MultiTileDoor</thingClass>
+    <statBases>
+      <WorkToBuild>1600</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>5</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Doors/BS_LargeDoor2x1_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Doors/BS_LargeDoor2x1_MenuIcon_south</uiIconPath>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <size>(2, 1)</size>
+    <rotatable>true</rotatable>
+    <costStuffCount>75</costStuffCount>
+    <building>
+      <blueprintClass>Blueprint_Build</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>(2.6, 3.1)</drawSize>
+      </blueprintGraphicData>
+      <doorTopGraphic>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Top</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3.1, 2.3)</drawSize>
+      </doorTopGraphic>
+      <doorSupportGraphic>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Support</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3.1, 2.3)</drawSize>
+      </doorSupportGraphic>
+    </building>
+    <designationHotKey>Misc3</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_MultiCellDoor</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="DoorBase">
+    <defName>BS_GiantAutoDoor</defName>
+    <label>large autodoor</label>
+    <description>Divides rooms. This large, heavy door requires adjacent walls to function. Larger version of the autodoor.</description>
+    <thingClass>Building_MultiTileDoor</thingClass>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>5</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Doors/BS_LargeAutoDoor2x1_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Doors/BS_LargeAutoDoor2x1_MenuIcon_south</uiIconPath>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <size>(2, 1)</size>
+    <rotatable>true</rotatable>
+    <costStuffCount>75</costStuffCount>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <building>
+      <poweredDoorOpenSpeedFactor>0.7</poweredDoorOpenSpeedFactor>
+      <unpoweredDoorOpenSpeedFactor>1</unpoweredDoorOpenSpeedFactor>
+      <unpoweredDoorCloseSpeedFactor>1</unpoweredDoorCloseSpeedFactor>
+      <blueprintClass>Blueprint_Build</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>(2.6, 3.1)</drawSize>
+      </blueprintGraphicData>
+      <doorTopGraphic>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Top</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3.1, 2.3)</drawSize>
+      </doorTopGraphic>
+      <doorSupportGraphic>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Support</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3.1, 2.3)</drawSize>
+      </doorSupportGraphic>
+    </building>
+    <designationHotKey>Misc3</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_MultiCellDoor</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>Autodoors</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+  </ThingDef>
+  <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+</Defs>

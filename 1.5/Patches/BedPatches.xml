@@ -19,4 +19,23 @@
 		</match>
 	</Operation>
 
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/ThingDef[@Name="BedWithQualityBase"]/building</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name="BedWithQualityBase"]</xpath>
+			<value>
+				<building>
+          <bed_maxBodySize>1.9</bed_maxBodySize>
+        </building>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name="BedWithQualityBase"]/building</xpath>
+			<value>
+				<bed_maxBodySize>1.9</bed_maxBodySize>
+			</value>
+		</match>
+	</Operation>
+	
 </Patch>

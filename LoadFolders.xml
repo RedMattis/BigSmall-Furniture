@@ -4,6 +4,12 @@
     <li>1.4</li>
     <li IfModActive="dankpyon.medieval.overhaul">1.4/Mods/MO</li>
     <li IfModActive="vanillaexpanded.vfecore">1.4/Mods/ve_furniture_expanded</li>
-    
   </v1.4>
+
+  <v1.5>
+    <li>/</li>
+    <li>1.5</li>
+    <li IfModActive="dankpyon.medieval.overhaul">1.5/Mods/MO</li>
+    <li IfModActive="vanillaexpanded.vfecore">1.5/Mods/ve_furniture_expanded</li>
+  </v1.5>
 </loadFolders>
