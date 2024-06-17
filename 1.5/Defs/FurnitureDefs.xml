@@ -162,7 +162,7 @@
       <MaxHitPoints>340</MaxHitPoints>
       <Beauty>1</Beauty>
       <WorkToBuild>800</WorkToBuild>
-      <Mass>60</Mass>
+      <Mass>4</Mass>
       <BedRestEffectiveness>1</BedRestEffectiveness>
     </statBases>
 
@@ -207,7 +207,7 @@
     <statBases>
       <MaxHitPoints>400</MaxHitPoints>
       <WorkToBuild>1500</WorkToBuild>
-      <Mass>90</Mass>
+      <Mass>6</Mass>
       <Beauty>2</Beauty>
       <BedRestEffectiveness>1</BedRestEffectiveness>
     </statBases>

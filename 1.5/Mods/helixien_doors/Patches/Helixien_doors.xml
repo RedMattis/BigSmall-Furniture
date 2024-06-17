@@ -1,0 +1,17 @@
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <!-- <success>Always</success> -->
+    <xpath>/Defs/ThingDef[defName="BS_GiantDoor" or defName="BS_GiantAutoDoor"]/building/doorTopGraphic/drawSize</xpath>
+    <value>
+      <drawSize>(3,2)</drawSize>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <!-- <success>Always</success> -->
+    <xpath>/Defs/ThingDef[defName="BS_GiantDoor" or defName="BS_GiantAutoDoor"]/building/doorSupportGraphic/drawSize</xpath>
+    <value>
+      <drawSize>(3,2)</drawSize>
+    </value>
+  </Operation>
+</Patch>
