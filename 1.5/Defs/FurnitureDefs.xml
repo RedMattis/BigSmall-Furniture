@@ -420,4 +420,55 @@
     
     <designationCategory>BS_Furniture</designationCategory>
   </ThingDef>
+
+
+  <!--Giant Crib-->
+  <ThingDef ParentName="SansComfortBedBase">
+    <defName>BS_GiantCrib</defName>
+    <label>giant crib</label>
+    <description>An oversized cozy bed with safe latticed sides, perfect for an especially big sleepy baby. A high quality crib will make a baby happy. Multiple cribs can be placed in a bedroom without turning it into a barracks.</description>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+        </linkableFacilities>
+      </li>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+    <designationCategory>BS_Furniture</designationCategory>
+    <graphicData>
+      <texPath>Beds/BS_GiantCrib</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>4.2</drawSize>
+      <shadowData>
+        <volume>(1.5,0.5,1.75)</volume>
+      </shadowData>
+    </graphicData>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <statBases>
+      <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">0</BirthRitualQualityOffset>
+      <MaxHitPoints>70</MaxHitPoints>
+      <Beauty>1</Beauty>
+      <WorkToBuild>400</WorkToBuild>
+      <Mass>15</Mass>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+    <size>(2,2)</size>
+    <costStuffCount>25</costStuffCount>
+    <uiOrder>2022</uiOrder>
+    <building>
+      <bed_maxBodySize>0.41</bed_maxBodySize>
+      <bed_showSleeperBody>True</bed_showSleeperBody>
+      <bed_emptyCountsForBarracks>false</bed_emptyCountsForBarracks>
+      <bed_crib>True</bed_crib>
+      <bed_pawnDrawOffset>0.1</bed_pawnDrawOffset>
+      <bed_DisplayOwnerType>false</bed_DisplayOwnerType>
+      <paintable>true</paintable>
+    </building>
+    <researchPrerequisites Inherit="False">
+    </researchPrerequisites>
+  </ThingDef>
 </Defs>
