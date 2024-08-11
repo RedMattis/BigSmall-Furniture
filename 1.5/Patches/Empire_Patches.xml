@@ -5,6 +5,7 @@
       <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
       <value>
         <li>BS_BigBed</li>
+        <li>BS_BigDoubleBed</li>
         <li>BS_BigRoyalBed</li>
         <li>BS_MegaUniversalBed</li>
         <li>BS_SmolRoyalBed</li>
