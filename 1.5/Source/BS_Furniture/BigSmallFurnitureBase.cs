@@ -45,6 +45,18 @@ namespace BigAndSmall
         }
     }
 
+    [HarmonyPatch(typeof(RestUtility), nameof(RestUtility.IsValidBedFor))]
+    public static class RestUtility_IsValidBedFor_Patch
+    {
+
+        [HarmonyPriority(int.MinValue)]
+        public static void Postfix(ref bool __result, Thing bedThing, Pawn sleeper, Pawn traveler,
+            bool checkSocialProperness, bool allowMedBedEvenIfSetToNoCare, bool ignoreOtherReservations, GuestStatus? guestStatus)
+        {
+            // This magic patch with no content somehow fixes a compatibility issue with VRE - Androids.
+        }
+    }
+
     [HarmonyPatch(typeof(BedInteractionCellSearchPattern), nameof(BedInteractionCellSearchPattern.BedCellOffsets))]
     public static class BedCellOffsets_Patch
     {
