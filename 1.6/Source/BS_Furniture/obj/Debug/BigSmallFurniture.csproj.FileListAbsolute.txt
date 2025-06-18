@@ -1,0 +1,16 @@
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\Assemblies\BigSmallFurniture.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\Source\BS_Furniture\obj\Debug\BigSmallFurniture.csproj.AssemblyReference.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\Source\BS_Furniture\obj\Debug\BigSmallFurniture.csproj.CoreCompileInputs.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\Source\BS_Furniture\obj\Debug\BigSmallFurniture.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.4\Assemblies\BigSmallFurniture.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.4\Source\BS_Furniture\obj\Debug\BigSmallFurniture.csproj.AssemblyReference.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.4\Source\BS_Furniture\obj\Debug\BigSmallFurniture.csproj.CoreCompileInputs.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.4\Source\BS_Furniture\obj\Debug\BigSmallFurniture.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.5\Assemblies\BigSmallFurniture.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.5\Source\BS_Furniture\obj\Debug\BigSmallFurniture.csproj.AssemblyReference.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.5\Source\BS_Furniture\obj\Debug\BigSmallFurniture.csproj.CoreCompileInputs.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.5\Source\BS_Furniture\obj\Debug\BigSmallFurniture.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.6\Assemblies\BigSmallFurniture.dll
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.6\Source\BS_Furniture\obj\Debug\BigSmallFurniture.csproj.AssemblyReference.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.6\Source\BS_Furniture\obj\Debug\BigSmallFurniture.csproj.CoreCompileInputs.cache
+C:\Games\Steam\steamapps\common\RimWorld\Mods\Big and Small - Furniture\1.6\Source\BS_Furniture\obj\Debug\BigSmallFurniture.dll

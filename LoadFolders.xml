@@ -13,4 +13,11 @@
     <li IfModActive="vanillaexpanded.vfecore">1.5/Mods/ve_furniture_expanded</li>
     <li IfModActive="ReBuild.COTR.DoorsAndCorners">1.5/Mods/helixien_doors</li>
   </v1.5>
+  <v1.6>
+    <li>/</li>
+    <li>1.6</li>
+    <li IfModActive="dankpyon.medieval.overhaul">1.6/Mods/MO</li>
+    <li IfModActive="vanillaexpanded.vfecore">1.6/Mods/ve_furniture_expanded</li>
+    <li IfModActive="ReBuild.COTR.DoorsAndCorners">1.6/Mods/helixien_doors</li>
+  </v1.6>
 </loadFolders>

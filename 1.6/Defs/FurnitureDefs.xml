@@ -1,0 +1,474 @@
+<Defs>
+  <!-- <ThingDef ParentName="SleepingSpotBase">
+    <defName>BS_BigSleepingSpot</defName>
+    <label>giant sleeping spot</label>
+    <description>Designates a spot on the ground where people should sleep. Not comfortable.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/SleepSpot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <size>(3,4.5)</size>
+    <designationHotKey>Misc1</designationHotKey>
+  </ThingDef> -->
+
+  <DesignationCategoryDef>
+    <defName>BS_Furniture</defName>
+    <label>B&amp;S Furniture</label>
+    <order>12</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+    <preferredColumn>1</preferredColumn>
+  </DesignationCategoryDef>
+
+  <ThingDef Name="BS_BigBedBase" ParentName="BasicBedBase" Abstract="True">
+    <building>
+      <paintable>true</paintable>
+      <bed_pawnDrawOffset>0.40</bed_pawnDrawOffset>
+      <bed_maxBodySize>9999</bed_maxBodySize>
+    </building>
+    
+    <designationCategory>BS_Furniture</designationCategory>
+    <uiIconScale>1.00</uiIconScale>
+  </ThingDef>
+
+  <ThingDef Name="BS_BigBedBaseSansComfort" ParentName="SansComfortBedBase" Abstract="True">
+    <building>
+      <paintable>true</paintable>
+      <bed_pawnDrawOffset>0.40</bed_pawnDrawOffset>
+      <bed_maxBodySize>9999</bed_maxBodySize>
+    </building>
+    
+    <designationCategory>BS_Furniture</designationCategory>
+    <uiIconScale>1.00</uiIconScale>
+  </ThingDef>
+
+
+  <!--Big-->
+
+  <ThingDef ParentName="BS_BigBedBase" Name="BS_BigBed">
+    <defName>BS_BigBed</defName>
+    <label>giant bed</label>
+    <description>A cozy mattress and sheets on a frame for resting.</description>
+    <graphicData>
+      <texPath>Beds/Bed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,3.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,1.5,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>340</MaxHitPoints>
+      <Beauty>1</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>60</Mass>
+      <BedRestEffectiveness>1.05</BedRestEffectiveness>
+    </statBases>
+    
+    <size>(2,3)</size>
+    <costStuffCount>100</costStuffCount>
+    <designationHotKey>Misc2</designationHotKey>
+    <uiOrder>2010</uiOrder>
+    <interactionCellOffset>(2,2,2)</interactionCellOffset>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BS_BigBedBase" Name="BS_BigDoubleBed">
+    <defName>BS_BigDoubleBed</defName>
+    <label>giant double bed</label>
+    <description>A simple double-wide bed that fits two people.</description>
+    <graphicData>
+      <texPath>Beds/DoubleBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,3.05)</drawSize> <!--x1.487 of vanilla size-->
+      <damageData>
+        <rect>(0,0.05,3,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>90</Mass>
+      <Beauty>2</Beauty>
+      <BedRestEffectiveness>1.05</BedRestEffectiveness>
+    </statBases>
+    <size>(3,3)</size>
+    <costStuffCount>145</costStuffCount>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <designationHotKey>Misc3</designationHotKey>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>2</sleepingSlotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--Primitive Beds-->
+  <ThingDef ParentName="BS_BigBed">
+    <defName>BS_BigTribalBed</defName>
+    <label>giant primitive bed</label>
+    <description>A primitive bed on a frame for resting.</description>
+    <graphicData>
+      <texPath>Beds/SingleFurBed</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>1</Beauty>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+    <researchPrerequisites Inherit="False"/>
+  </ThingDef>
+
+  <ThingDef ParentName="BS_BigDoubleBed">
+    <defName>BS_BigTribalDoubleBed</defName>
+    <label>giant primitive bed</label>
+    <description>A primitive double bed on a frame for resting.</description>
+    <graphicData>
+      <texPath>Beds/DoubleFurBed</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>1</Beauty>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+    <researchPrerequisites Inherit="False"/>
+  </ThingDef>
+
+  <!--Bedrolls-->
+  <ThingDef ParentName="BS_BigBedBase">
+    <defName>BS_BigBedroll</defName>
+    <label>giant bedroll</label>
+    <description>A giant bedroll resting.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/Bedroll</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1.48,3.0)</drawSize>
+      <damageData>
+        <rect>(0,0.05,1.5,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>340</MaxHitPoints>
+      <Beauty>1</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>4</Mass>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+
+    <building>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <bed_caravansCanUse>true</bed_caravansCanUse>
+      <destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+      <destroyShakeAmount>0</destroyShakeAmount>
+    </building>
+
+    <stuffCategories Inherit="False">
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    
+    <size>(2,3)</size>
+    <costStuffCount>100</costStuffCount>
+    <designationHotKey>Misc2</designationHotKey>
+    <uiOrder>2010</uiOrder>
+    <interactionCellOffset>(2,2,2)</interactionCellOffset>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BS_BigBedBase">
+    <defName>BS_BigDoubleBedroll</defName>
+    <label>giant double bedroll</label>
+    <description>A giant bedroll that fits two people.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/BedrollDouble</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,3.05)</drawSize> <!--x1.487 of vanilla size-->
+      <damageData>
+        <rect>(0,0.05,3,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>6</Mass>
+      <Beauty>2</Beauty>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+
+    <building>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <bed_caravansCanUse>true</bed_caravansCanUse>
+      <destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+      <destroyShakeAmount>0</destroyShakeAmount>
+    </building>
+
+    <stuffCategories Inherit="False">
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+
+    <size>(3,3)</size>
+    <costStuffCount>145</costStuffCount>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <designationHotKey>Misc3</designationHotKey>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>2</sleepingSlotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+  <!-- Royal -->
+  <ThingDef ParentName="BS_BigBedBase">
+    <defName>BS_BigRoyalBed</defName>
+    <label>giant royal bed</label>
+    <description>A huge luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits two.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/RoyalBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,3.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,3,2.90)</rect>
+      </damageData>
+    </graphicData>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>50000</WorkToBuild>
+      <Mass>60</Mass>
+      <Beauty>95</Beauty>
+      <BedRestEffectiveness>1.1</BedRestEffectiveness>
+      <Comfort>0.90</Comfort>
+    </statBases>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <size>(3,3)</size>
+    <costStuffCount>250</costStuffCount>
+    <costList>
+      <Gold>100</Gold>
+    </costList>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>2</sleepingSlotCount>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Hospital -->
+  <ThingDef ParentName="BS_BigBedBaseSansComfort">
+    <defName>BS_BigHospitalBed</defName>
+    <label>giant hospital bed</label>
+    <description>A bed specially designed for use in hospitals. Adjustable for a patient and festooned with built-in equipment, it improves medical outcomes over normal beds.</description>
+    <graphicData>
+      <texPath>Beds/HospitalBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.05,3.05)</drawSize>
+    </graphicData>
+    <castEdgeShadows>True</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>2800</WorkToBuild>
+      <Mass>35</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>1.05</BedRestEffectiveness>
+      <Comfort>0.80</Comfort>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>1.1</SurgerySuccessChanceFactor>
+      <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">5</BirthRitualQualityOffset>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+          <li MayRequire="VanillaExpanded.VFEMedical">Facility_VitalsCentre</li>
+          <li MayRequire="VanillaExpanded.VFEMedical">Facility_IVDrip</li>
+        </linkableFacilities>
+      </li>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+    <size>(2,3)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>200</costStuffCount>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>10</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+      <buildingSizeCategory>Small</buildingSizeCategory>
+      <paintable>true</paintable>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <designationHotKey>Misc5</designationHotKey>
+    <researchPrerequisites>
+      <li>HospitalBed</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+    <uiIconScale>1.00</uiIconScale>
+  </ThingDef>
+
+
+  <!-- Mega Beds-->
+  <ThingDef ParentName="BS_BigBedBaseSansComfort">
+    <defName>BS_MegaUniversalBed</defName>
+    <label>titan bed</label>
+    <description>A bed specially designed for handling huge pawns. It can also function as a hospital bed.</description>
+    <graphicData>
+      <texPath>Beds/HospitalBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(5.25,5.25)</drawSize>
+    </graphicData>
+    <castEdgeShadows>True</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>2800</WorkToBuild>
+      <Mass>35</Mass>
+      <Flammability>1.0</Flammability>
+      <BedRestEffectiveness>1.1</BedRestEffectiveness>
+      <Comfort>0.80</Comfort>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>1.1</SurgerySuccessChanceFactor>
+      <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">5</BirthRitualQualityOffset>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+          <li MayRequire="VanillaExpanded.VFEMedical">Facility_VitalsCentre</li>
+          <li MayRequire="VanillaExpanded.VFEMedical">Facility_IVDrip</li>
+        </linkableFacilities>
+      </li>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+    <size>(3,5)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>400</costStuffCount>
+    <costList>
+      <Steel>500</Steel>
+      <ComponentIndustrial>20</ComponentIndustrial>
+    </costList>
+    <building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>10</bed_healPerDay>
+      <!-- <bed_defaultMedical>true</bed_defaultMedical> -->
+      <buildingSizeCategory>Small</buildingSizeCategory>
+      <paintable>true</paintable>
+      <bed_pawnDrawOffset>0.75</bed_pawnDrawOffset>
+      <bed_maxBodySize>9999</bed_maxBodySize>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <designationHotKey>Misc5</designationHotKey>
+    <researchPrerequisites>
+      <li>HospitalBed</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+    <uiIconScale>1.00</uiIconScale>
+    
+    <designationCategory>BS_Furniture</designationCategory>
+  </ThingDef>
+
+
+  <!--Giant Crib-->
+  <ThingDef ParentName="SansComfortBedBase">
+    <defName>BS_GiantCrib</defName>
+    <label>giant crib</label>
+    <description>An oversized cozy bed with safe latticed sides, perfect for an especially big sleepy baby. A high quality crib will make a baby happy. Multiple cribs can be placed in a bedroom without turning it into a barracks.</description>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+        </linkableFacilities>
+      </li>
+      <li Class="BigAndSmall.CompProperties_Bed">
+        <sleepingSlotCount>1</sleepingSlotCount>
+      </li>
+    </comps>
+    <designationCategory>BS_Furniture</designationCategory>
+    <graphicData>
+      <texPath>Beds/BS_GiantCrib</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>4.2</drawSize>
+      <shadowData>
+        <volume>(1.5,0.5,1.75)</volume>
+      </shadowData>
+    </graphicData>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <statBases>
+      <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">0</BirthRitualQualityOffset>
+      <MaxHitPoints>70</MaxHitPoints>
+      <Beauty>1</Beauty>
+      <WorkToBuild>400</WorkToBuild>
+      <Mass>15</Mass>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+    </statBases>
+    <size>(2,2)</size>
+    <costStuffCount>25</costStuffCount>
+    <uiOrder>2022</uiOrder>
+    <building>
+      <bed_maxBodySize>0.41</bed_maxBodySize>
+      <bed_showSleeperBody>True</bed_showSleeperBody>
+      <bed_emptyCountsForBarracks>false</bed_emptyCountsForBarracks>
+      <bed_crib>True</bed_crib>
+      <bed_pawnDrawOffset>0.1</bed_pawnDrawOffset>
+      <bed_DisplayOwnerType>false</bed_DisplayOwnerType>
+      <paintable>true</paintable>
+    </building>
+    <researchPrerequisites Inherit="False">
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>
