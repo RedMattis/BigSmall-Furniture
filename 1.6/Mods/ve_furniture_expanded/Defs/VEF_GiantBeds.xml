@@ -19,7 +19,6 @@
         <linkableFacilities>
           <li>EndTable</li>
           <li>Dresser</li>
-          <li>Table_LightEndTable</li>
           <li>Table_RoyalDresser</li>
           <li>Table_RoyalEndTable</li>
           <li>Table_Wardrobe</li>
@@ -92,7 +91,6 @@
         <linkableFacilities>
           <li>EndTable</li>
           <li>Dresser</li>
-          <li>Table_LightEndTable</li>
           <li>Table_RoyalDresser</li>
           <li>Table_RoyalEndTable</li>
           <li>Table_Wardrobe</li>
@@ -166,7 +164,6 @@
         <linkableFacilities>
           <li>EndTable</li>
           <li>Dresser</li>
-          <li>Table_LightEndTable</li>
           <li>Table_RoyalDresser</li>
           <li>Table_RoyalEndTable</li>
           <li>Table_Wardrobe</li>

@@ -4,7 +4,7 @@
     <label>giant royal tudor bed</label>
     <description>A luxurious gold-inlaid bed fit for the highborn. Very comfy and beautiful, it is a work of art in itself. Fits two.</description>
     <graphicData>
-      <texPath>Furniture/RoyalTudorBed</texPath>
+      <texPath>Things/Building/Furniture/RoyalTudorBed</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(6.026,6.026)</drawSize>
@@ -80,7 +80,7 @@
 		<label>giant fur bed</label>
 		<description>A cozy bed made from pieces of soft and comfy fur.</description>
 		<graphicData>
-			<texPath>Furniture/BedFur</texPath>
+			<texPath>Things/Building/Furniture/BedFur</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(3.05,3.05)</drawSize>
@@ -150,7 +150,7 @@
 		<label>giant double fur bed</label>
 		<description>A cozy double-wide bed that fits two people.</description>
 		<graphicData>
-			<texPath>Furniture/BedFurDouble</texPath>
+			<texPath>Things/Building/Furniture/BedFurDouble</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(3.05,3.05)</drawSize>
