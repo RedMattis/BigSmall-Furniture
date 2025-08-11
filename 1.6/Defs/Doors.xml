@@ -24,6 +24,7 @@
     <rotatable>true</rotatable>
     <costStuffCount>75</costStuffCount>
     <building>
+      <isStuffableAirtight>true</isStuffableAirtight>
       <blueprintClass>Blueprint_Build</blueprintClass>
       <blueprintGraphicData>
         <texPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon</texPath>
@@ -75,6 +76,7 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <building>
+      <isStuffableAirtight>true</isStuffableAirtight>
       <poweredDoorOpenSpeedFactor>0.7</poweredDoorOpenSpeedFactor>
       <unpoweredDoorOpenSpeedFactor>1</unpoweredDoorOpenSpeedFactor>
       <unpoweredDoorCloseSpeedFactor>1</unpoweredDoorCloseSpeedFactor>
