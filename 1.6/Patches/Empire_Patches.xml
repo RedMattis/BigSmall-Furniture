@@ -2,10 +2,13 @@
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+      <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="DoubleBed"]</xpath>
       <value>
+        <li>BS_BigTribalBed</li>
+        <li>BS_BigTribalDoubleBed</li>
         <li>BS_BigBed</li>
         <li>BS_BigDoubleBed</li>
+        
         <li>BS_BigRoyalBed</li>
         <li>BS_MegaUniversalBed</li>
         <li>BS_SmolRoyalBed</li>
@@ -16,7 +19,7 @@
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+      <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="RoyalBed"]</xpath>
       <value>
         <li>BS_BigRoyalBed</li>
         <li>BS_MegaUniversalBed</li>
@@ -28,8 +31,13 @@
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="SlabDoubleBed"]</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things</xpath>
+      <xpath>Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things[li="SlabDoubleBed"]</xpath>
       <value>
+        <li>BS_BigTribalBed</li>
+        <li>BS_BigTribalDoubleBed</li>
+        <li>BS_BigBed</li>
+        <li>BS_BigDoubleBed</li>
+
         <li>BS_BigRoyalBed</li>
         <li>BS_MegaUniversalBed</li>
         <li>BS_SmolRoyalBed</li>

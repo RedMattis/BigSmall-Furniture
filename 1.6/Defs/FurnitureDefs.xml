@@ -131,7 +131,7 @@
 
   <ThingDef ParentName="BS_BigDoubleBed">
     <defName>BS_BigTribalDoubleBed</defName>
-    <label>giant primitive bed</label>
+    <label>giant primitive double bed</label>
     <description>A primitive double bed on a frame for resting.</description>
     <graphicData>
       <texPath>Beds/DoubleFurBed</texPath>
